@@ -1,0 +1,354 @@
+@import url("https://fonts.googleapis.com/css2?family=Monserrat:wght@200;400;600&display=swap");
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Monserrat";
+  list-style: none;
+}
+
+.grid-container {
+  background-color: #d5effb;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas:
+    "header header header"
+    "slide slide slide"
+    "we-contain we-contain we-contain"
+    "productos productos productos"
+    "contacto contacto contacto"
+    "footer footer footer";
+  padding-top: 35px;
+}
+
+.header {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  grid-area: header;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  height: 100px;
+}
+
+.container-logo {
+  width: 160px;
+  height: 80px;
+  object-fit: cover;
+}
+
+.logo {
+  width: 100%;
+  height: 100%;
+}
+
+.menu-navegacion {
+  display: flex;
+}
+
+.menu-ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.menu-li {
+  color: #000000;
+  font-size: 18px;
+  text-align: center;
+  border-right: 1px solid #0b5ecd;
+  padding: 10px;
+}
+
+.menu-li a {
+  text-decoration: none;
+  transition: 0.8s;
+}
+
+.menu-li a:hover {
+  color: #0b5ecd;
+}
+
+.slide {
+  grid-area: slide;
+  color: white;
+  text-align: center;
+  height: calc(100vh - 35px);
+}
+
+.slide img {
+  height: 100%;
+  width: 100%;
+}
+
+/* -------------------------------- */
+/* SECCIÓN DE NOSOTROS */
+/* -------------------------------- */
+
+.container_nosotros {
+  max-width: 1100px;
+  grid-area: we-contain;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+  grid-template-areas:
+    "nosotros nosotros nosotros nosotros"
+    "valores valores mision mision"
+    "valores valores vision vision";
+  margin: auto;
+  text-align: center;
+  column-gap: 8px;
+  row-gap: 8px;
+  padding: 100px 0 0 0;
+}
+
+.box-nosotros {
+  padding: 30px 0;
+  color: #fff;
+}
+
+.box-nosotros h3 {
+  font-size: 23px;
+  color: #111135;
+  margin-bottom: 20px;
+}
+
+.box-nosotros p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+  width: 90%;
+  margin: auto;
+}
+
+.box-nosotros h3::after {
+  content: "";
+  display: block;
+  height: 1px;
+  width: 60px;
+  background-color: #000000;
+  margin: 5px auto; /* Agrega espacio entre el h2 y la línea */
+}
+
+.historia,
+.mision,
+.vision,
+.valores {
+  background-color: #fdfdfd;
+  border: 1px solid #ddd;
+}
+
+.historia {
+  grid-area: nosotros;
+}
+.mision {
+  grid-area: mision;
+}
+
+.vision {
+  grid-area: vision;
+}
+.valores {
+  grid-area: valores;
+}
+
+.valores h3 {
+  padding-bottom: 12px;
+}
+
+.valores ul li {
+  margin: 20px 0;
+}
+
+.valores ul li span {
+  color: #333;
+  font-weight: 700;
+}
+
+/* -------------------------------- */
+/* SECCIÓN DE PRODUCTOS */
+/* -------------------------------- */
+
+.container-productos {
+  max-width: 1100px;
+  grid-area: productos;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas:
+    "descripcion descripcion descripcion"
+    "slide slide slide";
+  padding: 100px 0;
+  margin: auto;
+  text-align: center;
+
+}
+
+.productos_descripcion {
+  grid-area: descripcion;
+  padding: 30px 0;
+  background-color: #fff;
+  border: 1px solid #ddd;
+}
+
+.productos_descripcion h3 {
+  margin: 0 auto;
+  font-size: 30px;
+  width: 65%;
+  color: #0a3dac;
+  font-weight: 700;
+}
+
+.productos_descripcion p {
+  color: #727272;
+  margin: 0 auto;
+  font-size: 18px;
+  width: 70%;
+  padding: 10px 0 0 0;
+}
+
+.slide_productos {
+  grid-area: slide;
+  display: flex;
+  justify-content: center;
+  background-color: #fdfdfd;
+  border: 1px solid #ddd;
+  flex-wrap: wrap;
+  margin-top: 8px;
+}
+
+.box-productos {
+  box-sizing: border-box;
+  max-width: 300px;
+  background-color: #fff;
+  overflow: hidden;
+  /* Para recortar contenido que se extienda más allá del contenedor */
+}
+
+.box-productos:hover {
+  background-color: #ddd;
+}
+
+.box-productos img {
+  width: 100%;
+  height: 330px;
+  object-fit: cover;
+}
+.box-productos h3 {
+  font-size: 21px;
+  font-weight: 700;
+  color: #727272;
+}
+
+.box-productos p {
+  font-size: 21px;
+  color: #727272;
+  padding: 0 0 30px 0;
+}
+
+/* -------------------------------- */
+/* SECCIÓN DE CONTACTO */
+/* -------------------------------- */
+
+.container-contacto {
+  width: 1100px;
+  grid-area: contacto;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  background-color: #000;
+  color: #fff;
+}
+
+.side-contacto
+{
+  width: 65%;
+  padding: 23px 0;
+}
+
+.side-contacto h2 {
+  margin-bottom: 20px;
+  font-size: 35px;
+  font-weight: 700;
+  padding: 15px 0;
+}
+
+.info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.info-item {
+  width: 300px;
+  background-color: #fff;
+  color: #000;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+}
+
+.info-item h3 {
+  font-size: 22px;
+  padding-bottom: 5px;
+}
+
+.info-item p {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.info-item a i{
+  font-size: 22px;
+  padding: 0 5px;
+  color: #000;
+}
+
+.info-item:last-child {
+  width: 620px;
+}
+
+.side-ubicacion {
+  width: 35%;
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.side-ubicacion h2{
+  width: 100%;
+  font-size: 35px;
+  font-weight: 700;
+  padding: 15px 0;
+}
+
+.mapa {
+  width: 100%;
+  padding: 0 20px;
+}
+
+/* -------------------------------- */
+/* SECCIÓN DE FOOTER */
+/* -------------------------------- */
+
+.container-footer {
+  grid-area: footer;
+  width: 100%;
+  color: white;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 22px;
+  font-size: 20px;
+}

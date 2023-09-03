@@ -5,11 +5,12 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Document</title>
+  <title>h2olife</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,500&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -36,8 +37,20 @@
       </nav>
     </header>
 
-    <div class="slide">
-      <img src="img/pacasmayo.jpg" alt="" />
+    <div class="portada-slide">
+      <ul>
+        <li id="slider-1">
+          <h2>"Mantén tu mente y cuerpo en equilibrio con el poder del agua."</h2>
+        </li>
+
+        <li id="slider-2">
+          <h2>"Tu satisfacción es nuestra prioridad."</h2>
+        </li>
+
+        <li id="slider-3">
+          <h2>"Haz que cada gota cuente en tu búsqueda de un estilo de vida saludable."</h2>
+        </li>
+      </ul>
     </div>
 
     <!-- SECCIÓN DE NOSOTROS -->
@@ -124,24 +137,56 @@
       </div>
 
       <div class="slide_productos">
-        <div class="box-1 box-productos">
-          <img src="img/botellas_agua.jpg" alt="" />
-          <h3>600ml</h3>
-          <p>Sin gas</p>
+        <div class="slider active">
+          <div class="box-1 box-productos">
+            <img src="img/botellas_agua.jpg" alt="" />
+            <h3>600ml</h3>
+            <p>Con gas</p>
+          </div>
+          <div class="box-2 box-productos">
+            <img src="img/botellas_agua.jpg" alt="" />
+            <h3>600ml</h3>
+            <p>Con gas</p>
+          </div>
+          <div class="box-3 box-productos">
+            <img src="img/botellas_agua.jpg" alt="" />
+            <h3>600ml</h3>
+            <p>Con gas</p>
+          </div>
         </div>
-        <div class="box-2 box-productos">
-          <img src="img/botellas_agua.jpg" alt="" />
-          <h3>600ml</h3>
-          <p>Con gas</p>
+
+        <div class="slider">
+          <div class="box-4 box-productos">
+            <img src="img/botellas_agua.jpg" alt="" />
+            <h3>600ml</h3>
+            <p>Sin gas</p>
+          </div>
+          <div class="box-5 box-productos">
+            <img src="img/botellas_agua.jpg" alt="" />
+            <h3>600ml</h3>
+            <p>Sin gas</p>
+          </div>
+          <div class="box-6 box-productos">
+            <img src="img/botellas_agua.jpg" alt="" />
+            <h3>600ml</h3>
+            <p>Sin gas</p>
+          </div>
         </div>
-        <div class="box-3 box-productos">
-          <img src="img/botellas_agua.jpg" alt="" />
-          <h3>600ml</h3>
-          <p>Sin gas</p>
+
+        <div class="arrow arrow-left">
+          <button id="left">
+            <i class="fa-solid fa-arrow-left"></i>
+          </button>
+        </div>
+
+        <div class="arrow arrow-right">
+          <button id="right">
+            <i class="fa-solid fa-arrow-right"></i>
+          </button>
         </div>
       </div>
     </section>
-    
+
 
     <!-- SECCIÓN DE CONTACTO -->
 
@@ -153,32 +198,34 @@
             <h3>Horario de Atención</h3>
             <p>Lunes a Domingo: 8:00 AM - 8:00 PM</p>
           </div>
-          
           <div class="info-item">
             <h3>Correo Electrónico</h3>
             <p>Envíanos un correo a: <a href="mailto:h2olife@gmail.com">h2olife@gmail.com</a></p>
           </div>
-          
+
           <div class="info-item">
             <h3>Teléfono</h3>
-            <p><i class="fa-solid fa-plus"></i>51 935172287</a></p>
+            <p><i class="fa-solid fa-plus"></i>51 968375237</a></p>
           </div>
           <div class="info-item">
             <h3>Redes Sociales</h3>
-            <a href="https://facebook.com/jampibryan" target="_blank"><i class="fa-brands fa-facebook"></i></a>
-            <a href="https://instagram.com/jampibryan" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.facebook.com/profile.php?id=100071500779605" target="_blank"><i
+                class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.instagram.com/h2olife.pe/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
           </div>
           <div class="info-item">
             <h3>Mensaje</h3>
-            <p>Estamos aquí para atenderte. ¡No dudes en contactarnos!</p>
-            <p>Estamos aquí para atenderte. ¡No dudes en contactarnos!</p>
+            <p>Estamos aquí para atenderte. <br> ¡No dudes en contactarnos!</p>
           </div>
         </div>
       </div>
-      
+
       <div class="side-ubicacion">
         <h2>UBICACIÓN</h2>
-        <iframe class="mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3956.4917739725133!2d-79.57032952465231!3d-7.410695872981687!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x904d456260655295%3A0x4a0b1c4daf8566c3!2sPacasmayo!5e0!3m2!1ses-419!2spe!4v1692298542845!5m2!1ses-419!2spe" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe class="mapa"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3956.4917739725133!2d-79.57032952465231!3d-7.410695872981687!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x904d456260655295%3A0x4a0b1c4daf8566c3!2sPacasmayo!5e0!3m2!1ses-419!2spe!4v1692298542845!5m2!1ses-419!2spe"
+          width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
     </section>
 
@@ -187,5 +234,8 @@
       <p>&copy; 2023 Jampi Bryan. Todos los derechos reservados.</p>
     </footer>
   </div>
+
+  <script src="script.js"></script>
 </body>
+
 </html>

@@ -22,6 +22,8 @@
   padding-top: 35px;
 }
 
+/* SECCIÓN HEADER */
+
 .header {
   background-color: #fff;
   border: 1px solid #ddd;
@@ -74,16 +76,94 @@
   color: #0b5ecd;
 }
 
-.slide {
+/* SECCIÓN PORTADA SLIDE */
+
+.portada-slide {
   grid-area: slide;
   color: white;
   text-align: center;
-  height: calc(100vh - 35px);
+  overflow: hidden;
 }
 
-.slide img {
+.portada-slide ul {
+  display: flex;
+  width: 300%;
+  height: calc(100vh - 35px);
+  animation: slide 12s infinite normal ease-in-out;
+}
+
+.portada-slide li {
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.portada-slide li h2 {
+  font-size: 60px;
+  font-family: "Playfair Display", serif;
+  color: #fff;
+}
+
+.portada-slide li:first-child {
+  background-image: url("img/slider-1.jpg");
+}
+
+.portada-slide li:first-child h2 {
+  margin: 200px 700px 0 0;
+  width: 600px;
+}
+
+.portada-slide li:nth-child(2) {
+  background-image: url("img/slider-2.jpg");
+}
+
+.portada-slide li:nth-child(2) h2 {
+  margin: 350px 0 0 0;
+  width: 1200px;
+  color: #0b5ecd;
+}
+
+.portada-slide li:nth-child(3) {
+  background-image: url("img/slider-3.jpg");
+}
+
+.portada-slide li:nth-child(3) h2 {
+  margin: 50px 550px 0 0;
+  width: 600px;
+}
+
+.portada-slide li,
+.portada-slide img {
   height: 100%;
   width: 100%;
+}
+
+@keyframes slide {
+  0% {
+    margin-left: 0%;
+  }
+
+  30% {
+    margin-left: 0%;
+  }
+
+  35% {
+    margin-left: -100%;
+  }
+
+  65% {
+    margin-left: -100%;
+  }
+
+  70% {
+    margin-left: -200%;
+  }
+
+  100% {
+    margin-left: -200%;
+  }
 }
 
 /* -------------------------------- */
@@ -110,6 +190,7 @@
 .box-nosotros {
   padding: 30px 0;
   color: #fff;
+  border-radius: 20px;
 }
 
 .box-nosotros h3 {
@@ -132,7 +213,7 @@
   height: 1px;
   width: 60px;
   background-color: #000000;
-  margin: 5px auto; /* Agrega espacio entre el h2 y la línea */
+  margin: 5px auto;
 }
 
 .historia,
@@ -146,6 +227,7 @@
 .historia {
   grid-area: nosotros;
 }
+
 .mision {
   grid-area: mision;
 }
@@ -153,6 +235,7 @@
 .vision {
   grid-area: vision;
 }
+
 .valores {
   grid-area: valores;
 }
@@ -185,14 +268,12 @@
   padding: 100px 0;
   margin: auto;
   text-align: center;
-
 }
 
 .productos_descripcion {
   grid-area: descripcion;
   padding: 30px 0;
   background-color: #fff;
-  border: 1px solid #ddd;
 }
 
 .productos_descripcion h3 {
@@ -213,31 +294,48 @@
 
 .slide_productos {
   grid-area: slide;
-  display: flex;
+  position: relative;
+}
+
+.slider {
+  width: 100%;
+  border: 1px solid #0a3dac;
   justify-content: center;
   background-color: #fdfdfd;
   border: 1px solid #ddd;
   flex-wrap: wrap;
   margin-top: 8px;
+  opacity: 0;
+  display: none;
+}
+
+.slider.active {
+  opacity: 1;
+  display: flex;
 }
 
 .box-productos {
   box-sizing: border-box;
   max-width: 300px;
   background-color: #fff;
-  overflow: hidden;
-  /* Para recortar contenido que se extienda más allá del contenedor */
+  overflow: hidden; /* Para recortar contenido que se extienda más allá del contenedor */
+  margin: 4px 0;
 }
 
 .box-productos:hover {
-  background-color: #ddd;
+  transform: scale(
+    1.02
+  ); /* Aumenta el tamaño de la imagen al 102% en el hover */
+  filter: contrast(0.8); /* Aumenta el contraste de la imagen en el hover */
 }
 
 .box-productos img {
   width: 100%;
-  height: 330px;
+  height: 300px;
   object-fit: cover;
+  padding: 10px;
 }
+
 .box-productos h3 {
   font-size: 21px;
   font-weight: 700;
@@ -250,6 +348,29 @@
   padding: 0 0 30px 0;
 }
 
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.arrow-left {
+  left: 4%;
+}
+
+.arrow-right {
+  right: 4%;
+}
+
+#left,
+#right {
+  cursor: pointer;
+  font-size: 30px;
+  padding: 10px;
+  background-color: #fff;
+}
+
+
 /* -------------------------------- */
 /* SECCIÓN DE CONTACTO */
 /* -------------------------------- */
@@ -261,14 +382,14 @@
   display: flex;
   flex-wrap: wrap;
   text-align: center;
-  background-color: #000;
+  background-color: #333333;
   color: #fff;
 }
 
-.side-contacto
-{
+.side-contacto {
   width: 65%;
   padding: 23px 0;
+  border-right: 1px solid #96939b;
 }
 
 .side-contacto h2 {
@@ -307,7 +428,7 @@
   font-weight: 400;
 }
 
-.info-item a i{
+.info-item a i {
   font-size: 22px;
   padding: 0 5px;
   color: #000;
@@ -325,7 +446,7 @@
   flex-wrap: wrap;
 }
 
-.side-ubicacion h2{
+.side-ubicacion h2 {
   width: 100%;
   font-size: 35px;
   font-weight: 700;

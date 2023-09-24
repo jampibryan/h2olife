@@ -19,22 +19,27 @@
       <div class="container-logo">
         <img class="logo" src="img/logo-azul.jpg" alt="Logo-" />
       </div>
-      <nav class="menu-navegacion">
-        <ul class="menu-ul">
+      <nav id="menu-navegacion">
+        <ul class="menu-ul" id="links">
           <li class="menu-li">
             <a href="#">Inicio</a>
           </li>
           <li class="menu-li">
-            <a href="#nosotros">Nosotros</a>
+            <a href="#nosotros" class="seleccionado" onclick="seleccionar(this)">Nosotros</a>
           </li>
           <li class="menu-li">
-            <a href="#productos">Productos</a>
+            <a href="#productos" onclick="seleccionar(this)">Productos</a>
           </li>
           <li class="menu-li">
-            <a href="#contact">Contáctanos</a>
+            <a href="#contact" onclick="seleccionar(this)">Contáctanos</a>
           </li>
         </ul>
       </nav>
+
+      <!-- ICONO PARA EL MENÚ RESPONSIVO -->
+      <div id="icono-nav" onclick="responsiveMenu()">
+        <i class="fa-solid fa-bars"></i>
+      </div>
     </header>
 
     <div class="portada-slide">
@@ -55,7 +60,7 @@
 
     <!-- SECCIÓN DE NOSOTROS -->
 
-    <section class="container_nosotros" id="nosotros">
+    <section class="container-nosotros" id="nosotros">
       <div class="historia box-nosotros">
         <h3>NUESTRA HISTORIA</h3>
         <p>
@@ -141,7 +146,7 @@
           <div class="box-1 box-productos">
             <img src="img/botellas_agua.jpg" alt="" />
             <h3>600ml</h3>
-            <p>Con gas</p>
+            <p>Sin gas</p>
           </div>
           <div class="box-2 box-productos">
             <img src="img/botellas_agua.jpg" alt="" />
@@ -151,25 +156,22 @@
           <div class="box-3 box-productos">
             <img src="img/botellas_agua.jpg" alt="" />
             <h3>600ml</h3>
-            <p>Con gas</p>
+            <p>Sin gas</p>
           </div>
         </div>
 
-        <div class="slider">
+        <div class="slider slider_bidon">
           <div class="box-4 box-productos">
-            <img src="img/botellas_agua.jpg" alt="" />
-            <h3>600ml</h3>
-            <p>Sin gas</p>
+            <img src="img/bidon_agua.png" alt="" />
+            <h3>20L</h3>
           </div>
           <div class="box-5 box-productos">
-            <img src="img/botellas_agua.jpg" alt="" />
-            <h3>600ml</h3>
-            <p>Sin gas</p>
+            <img src="img/bidon_agua.png" alt="" />
+            <h3>20L</h3>
           </div>
           <div class="box-6 box-productos">
-            <img src="img/botellas_agua.jpg" alt="" />
-            <h3>600ml</h3>
-            <p>Sin gas</p>
+            <img src="img/bidon_agua.png" alt="" />
+            <h3>20L</h3>
           </div>
         </div>
 
@@ -231,7 +233,7 @@
 
     <!-- SECCIÓN DE FOOTER -->
     <footer class="container-footer">
-      <p>&copy; 2023 Jampi Bryan. Todos los derechos reservados.</p>
+      <p>&copy; 2023 <a href="https://jampibryan.github.io/jampibryan/" target="_blank">Jampi Bryan</a>. Todos los derechos reservados.</p>
     </footer>
   </div>
 

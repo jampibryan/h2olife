@@ -8,6 +8,10 @@
   list-style: none;
 }
 
+body {
+  width: 100%;
+}
+
 .grid-container {
   background-color: #d5effb;
   display: grid;
@@ -20,6 +24,7 @@
     "contacto contacto contacto"
     "footer footer footer";
   padding-top: 35px;
+  width: 100%;
 }
 
 /* SECCIÓN HEADER */
@@ -49,10 +54,6 @@
   height: 100%;
 }
 
-.menu-navegacion {
-  display: flex;
-}
-
 .menu-ul {
   display: flex;
   align-items: center;
@@ -60,7 +61,6 @@
 }
 
 .menu-li {
-  color: #000000;
   font-size: 18px;
   text-align: center;
   border-right: 1px solid #0b5ecd;
@@ -68,12 +68,17 @@
 }
 
 .menu-li a {
+  color: #000;
   text-decoration: none;
-  transition: 0.8s;
+  transition: 0.4s;
 }
 
 .menu-li a:hover {
   color: #0b5ecd;
+}
+
+#icono-nav {
+  display: none;
 }
 
 /* SECCIÓN PORTADA SLIDE */
@@ -170,7 +175,7 @@
 /* SECCIÓN DE NOSOTROS */
 /* -------------------------------- */
 
-.container_nosotros {
+.container-nosotros {
   max-width: 1100px;
   grid-area: we-contain;
   display: grid;
@@ -299,7 +304,6 @@
 
 .slider {
   width: 100%;
-  border: 1px solid #0a3dac;
   justify-content: center;
   background-color: #fdfdfd;
   border: 1px solid #ddd;
@@ -314,19 +318,24 @@
   display: flex;
 }
 
+.slider_bidon {
+  padding: 15px;
+}
+
 .box-productos {
   box-sizing: border-box;
   max-width: 300px;
   background-color: #fff;
-  overflow: hidden; /* Para recortar contenido que se extienda más allá del contenedor */
+  overflow: hidden;
+  /* Para recortar contenido que se extienda más allá del contenedor */
   margin: 4px 0;
 }
 
 .box-productos:hover {
-  transform: scale(
-    1.02
-  ); /* Aumenta el tamaño de la imagen al 102% en el hover */
-  filter: contrast(0.8); /* Aumenta el contraste de la imagen en el hover */
+  transform: scale(1.02);
+  /* Aumenta el tamaño de la imagen al 102% en el hover */
+  filter: contrast(0.8);
+  /* Aumenta el contraste de la imagen en el hover */
 }
 
 .box-productos img {
@@ -347,6 +356,9 @@
   color: #727272;
   padding: 0 0 30px 0;
 }
+
+
+/* FLECHAS */
 
 .arrow {
   position: absolute;
@@ -370,7 +382,6 @@
   background-color: #fff;
 }
 
-
 /* -------------------------------- */
 /* SECCIÓN DE CONTACTO */
 /* -------------------------------- */
@@ -389,7 +400,6 @@
 .side-contacto {
   width: 65%;
   padding: 23px 0;
-  border-right: 1px solid #96939b;
 }
 
 .side-contacto h2 {
@@ -472,4 +482,275 @@
   align-items: center;
   padding: 22px;
   font-size: 20px;
+}
+
+.container-footer a {
+  text-decoration: none;
+  color: #0b5ecd;
+}
+
+/* -------------------------------------------------- */
+/* ----------------------RESPONSIVE TABLET---------------------- */
+/* -------------------------------------------------- */
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  nav {
+    display: none;
+  }
+
+  .responsive {
+    display: block;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    position: absolute;
+    top: 100px;
+    padding: 10px 0;
+  }
+
+  .responsive .menu-ul {
+    width: 100%;
+    display: block;
+  }
+
+  .responsive .menu-ul .menu-li {
+    width: 100%;
+    margin: 5px 0;
+    cursor: pointer;
+  }
+
+  .menu-li {
+    font-size: 24px;
+    right: 0;
+  }
+
+  .responsive ul li a {
+    color: #fff;
+  }
+
+  #icono-nav {
+    display: block;
+  }
+
+  .menu-li a:hover {
+    color: #0178ff;
+  }
+
+  /* -------------------------------- */
+  /* SECCIÓN HEADER */
+  /* -------------------------------- */
+
+  /* -------------------------------- */
+  /* SECCIÓN PORTADA SLIDE */
+  /* -------------------------------- */
+
+  .portada-slide ul {
+    width: 100%;
+  }
+
+  .portada-slide li {
+    width: 100%;
+  }
+
+  .portada-slide li h2 {
+    font-size: 50px;
+  }
+
+  .portada-slide li:first-child h2 {
+    margin: auto;
+    margin-top: 250px;
+    padding: 50px;
+    width: 900px;
+  }
+
+  .portada-slide li:nth-child(2) h2 {
+    margin: 100px 0 0 0;
+    width: 1200px;
+    color: #0b5ecd;
+  }
+
+  .portada-slide li:nth-child(3) h2 {
+    margin: 50px 250px 0 100px;
+    width: 1200px;
+  }
+
+  /* -------------------------------- */
+  /* SECCIÓN DE NOSOTROS */
+  /* -------------------------------- */
+
+  .container-nosotros {
+    width: 80%;
+  }
+
+  /* -------------------------------- */
+  /* SECCIÓN DE PRODUCTOS */
+  /* -------------------------------- */
+  .box-productos:hover {
+    transform: none;
+    filter: none;
+  }
+
+  /* -------------------------------- */
+  /* SECCIÓN DE CONTACTO */
+  /* -------------------------------- */
+  .container-nosotros,
+  .container-productos,
+  .container-contacto {
+    width: 80%;
+  }
+
+  .side-contacto,
+  .side-ubicacion {
+    width: 100%;
+  }
+
+  .info-item {
+    width: 290px;
+  }
+
+  .info-item:last-child {
+    width: 70%;
+  }
+
+  /* -------------------------------- */
+  /* SECCIÓN DE FOOTER */
+  /* -------------------------------- */
+  .container-footer {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* -------------------------------------------------- */
+/* ----------------------RESPONSIVE PHONE---------------------- */
+/* -------------------------------------------------- */
+
+@media screen and (max-width: 767px) {
+  nav {
+    display: none;
+  }
+
+  .responsive {
+    display: block;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    position: absolute;
+    top: 100px;
+    padding: 10px 0;
+  }
+
+  .responsive .menu-ul {
+    width: 100%;
+    display: block;
+  }
+
+  .responsive .menu-ul .menu-li {
+    width: 100%;
+    margin: 5px 0;
+    cursor: pointer;
+  }
+
+  .menu-li {
+    font-size: 24px;
+    right: 0;
+  }
+
+  .responsive ul li a {
+    color: #fff;
+  }
+
+  #icono-nav {
+    display: block;
+  }
+
+  .menu-li a:hover {
+    color: #0178ff;
+  }
+
+  /* -------------------------------- */
+  /* SECCIÓN HEADER */
+  /* -------------------------------- */
+
+  /* -------------------------------- */
+  /* SECCIÓN PORTADA SLIDE */
+  /* -------------------------------- */
+
+  .portada-slide ul {
+    width: 100%;
+  }
+
+  .portada-slide li {
+    width: 100%;
+  }
+
+  .portada-slide li h2 {
+    font-size: 50px;
+  }
+
+  .portada-slide li:first-child h2 {
+    margin: auto;
+    margin-top: 100px;
+    padding: 50px;
+    width: 900px;
+  }
+
+  .portada-slide li:nth-child(2) h2 {
+    margin: 50px 0 0 0;
+    width: 1200px;
+    color: #0b5ecd;
+  }
+
+  .portada-slide li:nth-child(3) h2 {
+    margin: 50px 50px 0 50px;
+    width: 1200px;
+  }
+
+  /* -------------------------------- */
+  /* SECCIÓN DE NOSOTROS */
+  /* -------------------------------- */
+
+  .container-nosotros {
+    grid-template-areas:
+      "nosotros nosotros nosotros nosotros"
+      "valores valores valores valores"
+      "mision mision mision mision"
+      "vision vision vision vision";
+  }
+
+  /* -------------------------------- */
+  /* SECCIÓN DE PRODUCTOS */
+  /* -------------------------------- */
+  .box-productos:hover {
+    transform: none;
+    filter: none;
+  }
+
+  /* -------------------------------- */
+  /* SECCIÓN DE CONTACTO */
+  /* -------------------------------- */
+  .container-nosotros,
+  .container-productos,
+  .container-contacto {
+    width: 90%;
+  }
+
+  .side-contacto,
+  .side-ubicacion {
+    width: 100%;
+  }
+
+  .info-item {
+    width: 290px;
+  }
+
+  .info-item:last-child {
+    width: 70%;
+  }
+
+  /* -------------------------------- */
+  /* SECCIÓN DE FOOTER */
+  /* -------------------------------- */
+  .container-footer {
+    width: 100%;
+    text-align: center;
+  }
 }

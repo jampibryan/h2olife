@@ -77,6 +77,10 @@ body {
   color: #0b5ecd;
 }
 
+.menu-ul .seleccionado {
+  color: #0b5ecd;
+}
+
 #icono-nav {
   display: none;
 }

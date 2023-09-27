@@ -22,10 +22,10 @@
       <nav id="menu-navegacion">
         <ul class="menu-ul" id="links">
           <li class="menu-li">
-            <a href="#">Inicio</a>
+            <a href="#inicio" class="seleccionado" onclick="seleccionar(this)">Inicio</a>
           </li>
           <li class="menu-li">
-            <a href="#nosotros" class="seleccionado" onclick="seleccionar(this)">Nosotros</a>
+            <a href="#nosotros" onclick="seleccionar(this)">Nosotros</a>
           </li>
           <li class="menu-li">
             <a href="#productos" onclick="seleccionar(this)">Productos</a>
@@ -42,7 +42,7 @@
       </div>
     </header>
 
-    <div class="portada-slide">
+    <div class="portada-slide" id="inicio">
       <ul>
         <li id="slider-1">
           <h2>"Mantén tu mente y cuerpo en equilibrio con el poder del agua."</h2>

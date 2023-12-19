@@ -11,16 +11,17 @@
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="styles.css" />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 </head>
 
 <body>
   <div class="grid-container">
     <header class="header">
       <div class="container-logo">
-        <img class="logo" src="img/logo-azul.jpg" alt="Logo-" />
+        <img class="logo animate__animated animate__fadeInDown" src="img/logo-azul.jpg" alt="Logo-" />
       </div>
       <nav id="menu-navegacion">
-        <ul class="menu-ul" id="links">
+        <ul class="menu-ul logo animate__animated animate__bounceInDown" id="links">
           <li class="menu-li">
             <a href="#inicio" class="seleccionado" onclick="seleccionar(this)">Inicio</a>
           </li>
@@ -58,10 +59,10 @@
       </ul>
     </div>
 
-    <!-- SECCIÓN DE NOSOTROS -->
 
+    <!-- SECCIÓN DE NOSOTROS -->
     <section class="container-nosotros" id="nosotros">
-      <div class="historia box-nosotros">
+      <div class="historia box-nosotros animate__animated animate__backInRight">
         <h3>NUESTRA HISTORIA</h3>
         <p>
           H2OLife es una empresa fundada en la pintoresca localidad de
@@ -73,7 +74,7 @@
           sea de la más alta calidad.
         </p>
       </div>
-      <div class="mision box-nosotros">
+      <div class="mision box-nosotros animate__animated animate__backInRight">
         <h3>MISIÓN</h3>
         <p>
           En H2OLife, nuestra misión es ser el proveedor confiable de
@@ -82,7 +83,7 @@
           nuestros clientes y promoviendo la sostenibilidad.
         </p>
       </div>
-      <div class="vision box-nosotros">
+      <div class="vision box-nosotros animate__animated animate__backInRight">
         <h3>VISIÓN</h3>
         <p>
           En H2OLife, aspiramos a expandir nuestra presencia más allá de
@@ -93,7 +94,7 @@
           crecemos.
         </p>
       </div>
-      <div class="valores box-nosotros">
+      <div class="valores box-nosotros animate__animated animate__backInRight">
         <h3>VALORES</h3>
         <ul>
           <li>
@@ -132,8 +133,9 @@
     <!-- SECCIÓN DE PRODUCTOS -->
     <section class="container-productos" id="productos">
       <div class="productos_descripcion">
-        <h3>REFRESCA TU MUNDO: EL AUTÉNTICO SABOR DEL MANANTIAL EN CADA BOTELLA</h3>
-        <p>
+        <h3 class="animate__animated animate__bounceInDown">REFRESCA TU MUNDO: EL AUTÉNTICO SABOR DEL MANANTIAL EN CADA
+          BOTELLA</h3>
+        <p class="animate__animated animate__slideInUp">
           ¿El secreto detrás de cada gota? ¿Te gustaría descubrir qué hace que nuestra agua sea tan especial? <br />
           <strong>
             Explora Nuestras Increíbles Variedades en H2oLife y Encuentra la Perfecta para Ti
@@ -194,8 +196,8 @@
 
     <section class="container-contacto" id="contact">
       <div class="side-contacto">
-        <h2>CONTACTO</h2>
-        <div class="info">
+        <h2 class="animate__animated animate__lightSpeedInLeft">CONTACTO</h2>
+        <div class="info animate__animated animate__fadeIn">
           <div class="info-item">
             <h3>Horario de Atención</h3>
             <p>Lunes a Domingo: 8:00 AM - 8:00 PM</p>
@@ -207,7 +209,7 @@
 
           <div class="info-item">
             <h3>Teléfono</h3>
-            <p><i class="fa-solid fa-plus"></i>51 968375237</a></p>
+            <p><i class="fa-solid fa-plus"></i>51 935172287</a></p>
           </div>
           <div class="info-item">
             <h3>Redes Sociales</h3>
@@ -223,7 +225,7 @@
       </div>
 
       <div class="side-ubicacion">
-        <h2>UBICACIÓN</h2>
+        <h2 class="animate__animated animate__lightSpeedInRight">UBICACIÓN</h2>
         <iframe class="mapa"
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3956.4917739725133!2d-79.57032952465231!3d-7.410695872981687!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x904d456260655295%3A0x4a0b1c4daf8566c3!2sPacasmayo!5e0!3m2!1ses-419!2spe!4v1692298542845!5m2!1ses-419!2spe"
           width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
@@ -233,7 +235,8 @@
 
     <!-- SECCIÓN DE FOOTER -->
     <footer class="container-footer">
-      <p>&copy; 2023 <a href="https://jampibryan.github.io/jampibryan/" target="_blank">Jampi Bryan</a>. Todos los derechos reservados.</p>
+      <p>&copy; 2023 <a class="animate__animated animate__fadeInDown" href="https://jampibryan.github.io/jampibryan/" target="_blank">jampibryan</a>. Todos los
+        derechos reservados.</p>
     </footer>
   </div>
 
